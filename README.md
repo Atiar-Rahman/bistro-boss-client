@@ -12,5 +12,6 @@
     route setup from the react router dom
     and footer and navbar setup from the daysui
 
+## *create top banner simple carousel*
 
 
