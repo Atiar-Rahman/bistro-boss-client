@@ -1,11 +1,15 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Category from '../Category/Category';
+import ChefService from '../ChefService/ChefService';
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h1>this home</h1>
+            <Category></Category>
+            <ChefService></ChefService>
         </div>
     );
 };

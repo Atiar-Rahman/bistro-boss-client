@@ -13,5 +13,10 @@
     and footer and navbar setup from the daysui
 
 ## *create top banner simple carousel*
+    from awesome react components
 
+## *create swiper*
+    from awesome react components
+
+## *create section title*
 
