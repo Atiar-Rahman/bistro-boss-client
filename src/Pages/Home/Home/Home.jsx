@@ -3,6 +3,10 @@ import Banner from '../Banner/Banner';
 import Category from '../Category/Category';
 import ChefService from '../ChefService/ChefService';
 import PopularMenu from '../PopularMenu/PopularMenu';
+import Featured from '../Featured/Featured';
+import Contact from '../../../components/Contact/Contact';
+import ChefRecom from '../../Shared/ChefRecom/ChefRecom';
+import ChefSef from '../ChefSef/ChefSef';
 
 
 const Home = () => {
@@ -12,6 +16,9 @@ const Home = () => {
             <Category></Category>
             <ChefService></ChefService>
             <PopularMenu></PopularMenu>
+            <Contact></Contact>
+            <ChefSef></ChefSef>
+            <Featured></Featured>
         </div>
     );
 };
