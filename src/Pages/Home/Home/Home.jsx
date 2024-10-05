@@ -7,6 +7,7 @@ import Featured from '../Featured/Featured';
 import Contact from '../../../components/Contact/Contact';
 import ChefRecom from '../../Shared/ChefRecom/ChefRecom';
 import ChefSef from '../ChefSef/ChefSef';
+import Testimonial from '../Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Contact></Contact>
             <ChefSef></ChefSef>
             <Featured></Featured>
+            <Testimonial></Testimonial>
         </div>
     );
 };
