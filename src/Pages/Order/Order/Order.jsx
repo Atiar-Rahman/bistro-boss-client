@@ -5,42 +5,73 @@ import orderImg from '../../../assets/shop/banner2.jpg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import useMenu from '../../../Hooks/useMenu';
+import FoodCart from '../../../components/FoodCart/FoodCart';
+import OrderTab from '../OrderTab/OrderTab';
+import { useParams } from 'react-router-dom';
 
 const Order = () => {
     const [tabindex,setTabIndex] = useState(0);
     const [menu] = useMenu();
+
+    const {category} = useParams();
+    console.log(category);
+
     const pizza = menu.filter(item => item.category==='pizza');
     const soup = menu.filter(item=>item.category==='soup');
     const salad = menu.filter(item=>item.category ==='salad');
-    const offered = menu.filter(item=>item.category === 'offered');
+    const drinks = menu.filter(item=>item.category === 'drinks');
     const desserts = menu.filter(item=>item.category === 'dessert');
     return (
-        <div>
+        <div className='my-10'>
             <Cover img={orderImg} title="OrderFood"></Cover>
-            <h1>this order page</h1>
-            <Tabs defaultIndex={1} onSelect={index=> setTabIndex(index)}>
+            <Tabs defaultIndex={0} onSelect={index=> setTabIndex(index)} className='my-10 text-center'>
                 <TabList className='uppercase'>
-                    <Tab>salad</Tab>
                     <Tab>Pizza</Tab>
                     <Tab>Soup</Tab>
+                    <Tab>salad</Tab>
                     <Tab>Dessert</Tab>
                     <Tab>Drink</Tab>
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                    {
+                        pizza.map(item=><FoodCart key={item._id} item={item}></FoodCart>)
+                    }
+                    </div> */}
+                    <OrderTab category={pizza}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            soup.map(item=><FoodCart key={item._id} item={item}></FoodCart>)
+                        }
+                    </div> */}
+                    <OrderTab category={soup}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
+                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            salad.map(item=><FoodCart key={item._id} item={item}></FoodCart>)
+                        }
+                    </div> */}
+                    <OrderTab category={salad}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 4</h2>
+                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            desserts.map(item=><FoodCart key={item._id} item={item}></FoodCart>)
+                        }
+                    </div> */}
+                    <OrderTab category={desserts}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 5</h2>
+                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            drinks.map(item=><FoodCart key={item._id} item={item}></FoodCart>)
+                        }
+                    </div> */}
+                    <OrderTab category={drinks}></OrderTab>
                 </TabPanel>
             </Tabs>
         </div>
