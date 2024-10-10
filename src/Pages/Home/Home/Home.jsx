@@ -5,7 +5,6 @@ import ChefService from '../ChefService/ChefService';
 import PopularMenu from '../PopularMenu/PopularMenu';
 import Featured from '../Featured/Featured';
 import Contact from '../../../components/Contact/Contact';
-import ChefRecom from '../../Shared/ChefRecom/ChefRecom';
 import ChefSef from '../ChefSef/ChefSef';
 import Testimonial from '../Testimonial/Testimonial';
 import { Helmet } from 'react-helmet-async';
