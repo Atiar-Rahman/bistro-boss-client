@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+
 import MenuItem from '../../Shared/MenuItem/MenuItem';
 import useMenu from '../../../Hooks/useMenu';
+import SectionTitle from '../../../components/sectionTitle/SectionTitle';
 
 const PopularMenu = () => {
 
@@ -21,6 +21,7 @@ const PopularMenu = () => {
 
     return (
         <section>
+
             <SectionTitle heading={'From our menu'} subHeading={'checkout'}></SectionTitle>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-5'>
                 {
