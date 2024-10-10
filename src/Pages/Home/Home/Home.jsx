@@ -8,11 +8,15 @@ import Contact from '../../../components/Contact/Contact';
 import ChefRecom from '../../Shared/ChefRecom/ChefRecom';
 import ChefSef from '../ChefSef/ChefSef';
 import Testimonial from '../Testimonial/Testimonial';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>bistro boss | Home</title>
+            </Helmet>
             <Banner></Banner>
             <Category></Category>
             <ChefService></ChefService>
