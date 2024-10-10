@@ -8,29 +8,40 @@ import useMenu from '../../../Hooks/useMenu';
 import FoodCart from '../../../components/FoodCart/FoodCart';
 import OrderTab from '../OrderTab/OrderTab';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Order = () => {
-    const [tabindex,setTabIndex] = useState(0);
-    const [menu] = useMenu();
-
+    //array create all category
+    const categories = ['Pizza','Soup','Salad','Dessert','Drink'];
+   
     const {category} = useParams();
-    console.log(category);
+    // console.log(category);
+    const initialIndex = categories.indexOf(category);
+    // console.log(initialIndex);
 
+
+    const [tabindex,setTabIndex] = useState(initialIndex);
+    const [menu] = useMenu();
     const pizza = menu.filter(item => item.category==='pizza');
     const soup = menu.filter(item=>item.category==='soup');
     const salad = menu.filter(item=>item.category ==='salad');
     const drinks = menu.filter(item=>item.category === 'drinks');
     const desserts = menu.filter(item=>item.category === 'dessert');
+
+   
     return (
         <div className='my-10'>
+            <Helmet>
+                <title>Bistro Boss | order food</title>
+            </Helmet>
             <Cover img={orderImg} title="OrderFood"></Cover>
-            <Tabs defaultIndex={0} onSelect={index=> setTabIndex(index)} className='my-10 text-center'>
+            <Tabs defaultIndex={tabindex} onSelect={index=> setTabIndex(index)} className='my-10 text-center'>
                 <TabList className='uppercase'>
-                    <Tab>Pizza</Tab>
-                    <Tab>Soup</Tab>
+                    <Tab>pizza</Tab>
+                    <Tab>soup</Tab>
                     <Tab>salad</Tab>
-                    <Tab>Dessert</Tab>
-                    <Tab>Drink</Tab>
+                    <Tab>dessert</Tab>
+                    <Tab>drink</Tab>
                 </TabList>
 
                 <TabPanel>
