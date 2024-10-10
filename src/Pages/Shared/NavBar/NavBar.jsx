@@ -4,16 +4,8 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
     const navOptions = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li>
-            <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                </ul>
-            </details>
-        </li>
         <li><NavLink to={'/menu'}>Menu</NavLink></li>
+        <li><NavLink to={'/order'}>Order</NavLink></li>
     </>
     return (
         <div className="navbar fixed  bg-black bg-opacity-30 text-white z-10 max-w-screen-lg">
