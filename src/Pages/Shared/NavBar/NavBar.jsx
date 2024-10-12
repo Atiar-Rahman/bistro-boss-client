@@ -6,6 +6,7 @@ const NavBar = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/menu'}>Menu</NavLink></li>
         <li><NavLink to={'/order'}>Order</NavLink></li>
+        <li><NavLink to={'/login'}>Login</NavLink></li>
     </>
     return (
         <div className="navbar fixed  bg-black bg-opacity-30 text-white z-10 max-w-screen-lg">
